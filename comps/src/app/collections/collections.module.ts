@@ -8,9 +8,6 @@ import { CollectionsHomeComponent } from './collections-home/collections-home.co
   declarations: [
     CollectionsHomeComponent
   ],
-  exports: [
-    CollectionsHomeComponent
-  ],
   imports: [
     CommonModule,
     CollectionsRoutingModule
