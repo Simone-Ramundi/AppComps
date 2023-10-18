@@ -10,9 +10,11 @@ export class ModalComponent implements OnInit {
   constructor(private el: ElementRef) {
 
   }
-
+/* HEY SIMON! DO NOT FORGET TO IMPLEMENT THE NGONINIT*/
   ngOnInit(): void {
     document.body.appendChild(this.el.nativeElement)
   }
-
+  ngOnDestroy(): void {
+    this.el.nativeElement.remove()
+  }
 }
