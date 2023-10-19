@@ -7,9 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
   @Input() items: any[]=[];
+  openedItemIndex = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
+  onClick(index: number) {
+    if (index === this.openedItemIndex){
+      this.openedItemIndex = -1;
+  } else {
+      this.openedItemIndex = index
+    }
+  }
 
+  protected readonly open = open;
+  protected readonly onclick = onclick;
 }
